@@ -1,0 +1,38 @@
+.reviews {
+	&__text {
+	}
+
+	&__link {
+	}
+
+	&__arrow {
+	}
+	.slick-list {
+		overflow: hidden;
+	}
+	.slick-track {
+		display: flex;
+		min-width: 0;
+	}
+}
+.container {
+	max-width: 1600px;
+	padding: 0px 32px;
+	position: relative;
+}
+.reviews-slider {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 1;
+	display: flex;
+	width: 764px;
+	height: 675px;
+	// justify-content: space-between;
+	&__text {
+	}
+}
+.reviews-slide {
+	width: 100%;
+	min-height: 675px;
+}

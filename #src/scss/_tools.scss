@@ -1,0 +1,59 @@
+// ===========================переменные
+
+$mainFont: "Montserrat-Regular", Arial, Helvetica, sans-serif;
+$headerFont: "Prata-Regular", serif;
+$color-black: #1c1b1b;
+$color-white: #ffffff;
+$color-silver: #eef3f5;
+$color-golden: #bca853;
+$color-beige: #a4876a;
+$minwidth: 320px;
+$mw: 1400;
+// $md1: $mw + 40;
+$md1: 1599.98;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 575.98;
+$md5: 479.98;
+
+// ===========================подключение шрифтов
+
+@mixin fonts($font_name, $file_name, $weight, $style) {
+	@font-face {
+		font-family: $font_name;
+		font-display: swap;
+		src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+		font-weight: #{$weight};
+		font-style: #{$style};
+	}
+}
+// ================================сетка
+// .container {
+// 	max-width: $mw + px;
+// 	width: 100%;
+// 	margin: 0 auto;
+// 	padding: 0 20px;
+
+// 	@media (max-width: $md1+px) {
+// 		max-width: 1180px;
+// 	}
+// 	@media (max-width: 1200px) {
+// 		max-width: 980px;
+// 		padding: 0 10px;
+// 	}
+// 	@media (max-width: $md2+px) {
+// 		max-width: 740px;
+// 	}
+// 	@media (max-width: $md3+px) {
+// 		max-width: 560px;
+// 		// padding: 0 10px;
+// 	}
+// 	@media (max-width: $md4+px) {
+// 		// max-width: 450px;
+// 		max-width: none;
+// 		padding: 0 16px;
+// 	}
+// 	// @media (max-width: $md5+px) {
+// 	// 	max-width: none;
+// 	// }
+// }
