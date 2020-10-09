@@ -1,4 +1,4 @@
-/*=============================сброс======================*/
+/*=============================сброс стилей======================*/
 @import "_reset";
 /*=============================шрифты======================*/
 @import "_tools";
@@ -85,11 +85,15 @@
 /* ==============================общие стили============*/
 
 body {
+	display: flex;
+	flex-direction: column;
+
 	font-family: $mainFont;
 	font-size: 14px;
 	font-weight: 400;
 	line-height: 25px;
 	color: $color-black;
+	background-color: #fff;
 	@media (max-width: $md4+px) {
 		font-size: 12px;
 		line-height: 20px;
@@ -97,6 +101,11 @@ body {
 	&.lock {
 		overflow: hidden;
 	}
+}
+main {
+	width: 100%;
+	flex: 1 1 auto;
+	// overflow: hidden;
 }
 a {
 	font-family: $mainFont;
@@ -108,7 +117,6 @@ a {
 
 	@media (min-width: 992px) {
 		&:hover {
-			color: $color-golden;
 			transition: all 0.3s ease 0s;
 		}
 	}
@@ -167,6 +175,77 @@ h4 {
 	color: $color-white;
 }
 
+.arrow-link {
+	a {
+		display: inline-block;
+		position: relative;
+		font-family: "Montserrat-Medium", Arial, Helvetica, sans-serif;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 20px;
+		// margin-bottom: 10px;
+		text-transform: uppercase;
+		text-align: left;
+		color: $color-golden;
+		transition: all 0.2s ease 0s;
+		@media (max-width: $md3+px) {
+			line-height: 1;
+		}
+
+		@media (max-width: $md4+px) {
+			font-size: 12px;
+			line-height: 15px;
+		}
+	}
+	&__arrow {
+		display: inline-block;
+		width: 436px;
+		height: 1px;
+		background: $color-golden;
+
+		@media (max-width: 1199px) {
+			width: 471px;
+		}
+		@media (max-width: $md2+px) {
+			width: 471px;
+		}
+		@media (max-width: $md4+px) {
+			width: 287px;
+		}
+	}
+
+	&__img {
+		stroke: #bca853;
+		width: 13px;
+		height: 25px;
+		position: absolute;
+		top: 22px;
+		left: 425px;
+		@media (max-width: 1199px) {
+			left: 460px;
+		}
+		@media (max-width: $md3+px) {
+			top: 16px;
+		}
+		@media (max-width: $md4+px) {
+			left: 276px;
+			top: 9px;
+		}
+	}
+}
+@media (min-width: 992px) {
+	.arrow-link a:hover {
+		color: $color-white;
+		transition: all 0.2s ease 0s;
+		.arrow-link__arrow {
+			background-color: $color-white;
+		}
+
+		.arrow-link__img {
+			stroke: $color-white;
+		}
+	}
+}
 // .wrapper {
 // 	width: 100%;
 // 	min-height: 100%;
@@ -189,14 +268,24 @@ h4 {
 // 	visibility: hidden;
 // }
 
-/* ============================================стили секций=============================*/
+/* =================================стили секций=============================*/
+/* =========================Главный экран=============================*/
 @import "_header";
+/* =========================О нас=============================*/
 @import "_intro";
+/* =========================материалы=============================*/
+
 @import "_about";
-@import "_fixed";
-@import "_pack";
+/* =========================Что мы производим=============================*/
+// @import "_fixed";
+@import "_product";
+/* =========================Блок с акцией=============================*/
+@import "_action";
+/* =========================Последние работы=============================*/
 @import "_works";
+/* =========================Отзывы=============================*/
 @import "_reviews";
+/*============================медиа-запросы==============================*/
 
 // ============================================меню бургер
 // .menu-icon {

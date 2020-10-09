@@ -15,13 +15,15 @@
 </head>
 
 <body>
+	<!-- Главный экран -->
 	<header class="header">
 		<div class="container">
 			<div class="header__row">
 				<div class="header-top">
 					<div class="header-logo">
 						<div class="header-logo__img">
-							<a href="#"><img src="img/logo.svg" alt="logo"></a>
+							<img src="img/logo.svg" alt="logo">
+							<!-- <a href="#"></a> -->
 						</div>
 						<div class="header-logo__brand">Majoroff</div>
 					</div>
@@ -33,7 +35,7 @@
 						</ul>
 						<div class="header-contacts__calls">
 							<div class="header__phone">
-								<a href="tel:+79096377666" class="header__phone header__link">+7 (909) 637-76-66</a>
+								<a href="tel:+79096377666" class="header__phone-link header__link">+7 (909) 637-76-66</a>
 							</div>
 							<div class="header__callback">
 								<a href="#" class="header__popup header__link">Перезвоните мне</a>
@@ -49,7 +51,7 @@
 				</div>
 				<div class="header-bottom">
 					<div class="header-img">
-						<div class="header-img__case-1"><img src="img/case-1.png" alt=""></div>
+						<div class="header-img__case-1"><img src="img/case-1-1.png" alt=""></div>
 						<div class="header-img__case-2"><img src="img/case-2.png" alt=""></div>
 					</div>
 					<div class="header-bottom__content">
@@ -61,7 +63,7 @@
 							<li>Доставка по России и миру первым классом</li>
 							<li>Более 10 лет для того, чтобы стать лучшими</li>
 						</ul>
-						<a href="#" class="header-bottom__link">Перейти к нашим работам</a>
+						<a href="#works" class="header-bottom__link">Перейти к нашим работам</a>
 					</div>
 
 				</div>
@@ -69,249 +71,308 @@
 
 		</div>
 	</header>
-	<section class="intro">
-		<div class="container">
-			<div class="intro__title">
-				<h2>Более 10 лет на рынке</h2>
-			</div>
+	<main>
+		<!--  Блок “О нас” -->
+		<section class="intro">
+			<div class="container">
+				<div class="intro__wrapper">
+					<div class="intro__title">
+						<h2>Более 10 лет на рынке</h2>
+					</div>
 
-			<div class="intro__img-wrapper">
-				<div class="intro__img">
-					<!-- <img src="img/intro-1.jpg" alt=""> -->
+					<div class="intro__img" style="background-image: url(img/intro.jpg);"></div>
+					<div class="intro__content">
+						<p>Мы занимаемся производством чехлов уже второй десяток лет. Мы знаем, как делать наш продукт долговечным,
+							удобным и ярким. К нам обращаются люди, которым хочется подчеркнуть свой социальный статус.
+							С нашим продуктом ваш девайс будет удобно лежать в руке, не соскальзывать и защищать ваше устройство. </p>
+						<p>
+							Приобретите наш чехол и покажите всем, что вы можете <span>позволить себе больше.</span></p>
+
+					</div>
+					<div class="intro__facts">
+						<div class="intro__fact">
+							<div class="intro__digits">9 999+</div>
+							<div class="intro__desc">Положительных отзывов</div>
+						</div>
+						<div class="intro__fact">
+							<div class="intro__digits">1</div>
+							<div class="intro__desc">День на изготовление дизайна</div>
+						</div>
+						<div class="intro__fact">
+							<div class="intro__digits">9 из 10</div>
+							<div class="intro__desc">Клиентов обращаются снова</div>
+						</div>
+						<div class="intro__fact">
+							<div class="intro__digits">30 000+</div>
+							<div class="intro__desc">Выполненных проектов</div>
+						</div>
+					</div>
 				</div>
 			</div>
-			<div class="intro__content">
-				<p>Мы занимаемся производством чехлов уже второй десяток лет. Мы знаем, как делать наш продукт долговечным,
-					удобным и ярким. К нам обращаются люди, которым хочется подчеркнуть свой социальный статус.
-					С нашим продуктом ваш девайс будет удобно лежать в руке, не соскальзывать и защищать ваше устройство. </p>
-				<p>
-					Приобретите наш чехол и покажите всем, что вы можете <span>позволить себе больше.</span></p>
+		</section>
+		<!-- Блок “Наши материалы” -->
+		<section class="about">
+			<div class="container">
+				<div class="about__img-wrapper">
+					<div class="about__img">
+						<!-- <img src="img/intro-1.jpg" alt=""> -->
+					</div>
+				</div>
+				<div class="about__content">
+					<div class="about__item">
+						<h3>Натуральная кожа</h3>
+						<p class="about__text">Мы используем для наших продуктов кожу совершенно различных животных таких, как
+							<span>питон, крокодил, страус, игуана, акула</span> и другие. Наша продукция отличается качеством и
+							тактильными ощущения,
+							благодаря нашей технике.</p>
+					</div>
+					<div class="about__item">
+						<h3>Прочный пластик</h3>
+						<p class="about__text">Если вы предпочитаете пластиковые или силиконовые чехлы, или хотите выделиться среди
+							других красивым принтом, то в нашей компании вы можете заказать такие чехлы с различными дизайнами. Чехлы
+							из
+							наших материалов очень удобно лежат в руке и никогда не выскользнут.</p>
+					</div>
+					<div class="about__item">
+						<h3>Элементы персонализации</h3>
+						<p class="about__text">У вас или у именинника есть любимый футбольный клуб? Хотите сделать чехол с таким
+							логотипом? С логотипом компании, различных силовых структур? Либо создать аксессуар с инициалами или
+							именной
+							табличкой? Вы – по адресу! Также в нашей компании есть возможность заказать и объемный 3D-логотип из
+							различных металлов</p>
+					</div>
+
+				</div>
 			</div>
-			<div class="intro__facts">
-				<div class="intro__fact">
-					<div class="intro__digits">9 999+</div>
-					<div class="intro__desc">Положительных отзывов</div>
-				</div>
-				<div class="intro__fact">
-					<div class="intro__digits">1</div>
-					<div class="intro__desc">День на изготовление дизайна</div>
-				</div>
-				<div class="intro__fact">
-					<div class="intro__digits">9 из 10</div>
-					<div class="intro__desc">Клиентов обращаются снова</div>
-				</div>
-				<div class="intro__fact">
-					<div class="intro__digits">30 000+</div>
-					<div class="intro__desc">Выполненных проектов</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section class="about">
-		<div class="container">
-			<div class="about__img-wrapper">
-				<div class="about__img">
-					<!-- <img src="img/intro-1.jpg" alt=""> -->
-				</div>
-			</div>
-			<div class="about__content">
-				<div class="about__item">
-					<h3>Натуральная кожа</h3>
-					<p class="about__text">Мы используем для наших продуктов кожу совершенно различных животных таких, как
-						<span>питон, крокодил, страус, игуана, акула</span> и другие. Наша продукция отличается качеством и
-						тактильными ощущения,
-						благодаря нашей технике.</p>
-				</div>
-				<div class="about__item">
-					<h3>Прочный пластик</h3>
-					<p class="about__text">Если вы предпочитаете пластиковые или силиконовые чехлы, или хотите выделиться среди
-						других красивым принтом, то в нашей компании вы можете заказать такие чехлы с различными дизайнами. Чехлы из
-						наших материалов очень удобно лежат в руке и никогда не выскользнут.</p>
-				</div>
-				<div class="about__item">
-					<h3>Элементы персонализации</h3>
-					<p class="about__text">У вас или у именинника есть любимый футбольный клуб? Хотите сделать чехол с таким
-						логотипом? С логотипом компании, различных силовых структур? Либо создать аксессуар с инициалами или именной
-						табличкой? Вы – по адресу! Также в нашей компании есть возможность заказать и объемный 3D-логотип из
-						различных металлов</p>
+		</section>
+		<!-- Блок “Что мы производим” -->
+		<section class="product">
+			<div class="container">
+				<div class="product__wrapper">
+					<div class="product-about">
+						<div class="product-about__fixed">
+							<div class="product-about__content">
+								<h2>Мы знаем, как привлечь внимание к вашей персоне</h2>
+								<div class="product-about__cta">
+									<div class="product-about__icon"><img src="img/fixed-icon.svg" alt=""></div>
+									<div class="product-about__text">Просто листайте вниз</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="product-items">
+						<div class="product-item" style="background-image: url(img/01.jpg);">
+							<div class="product-item__content">
+								<h3>Чехлы из натуральной кожи</h3>
+							</div>
+						</div>
+						<div class="product-item" style="background-image: url(img/02.jpg);">
+							<div class="product-item__content">
+								<h3>Кастомные Airpods</h3>
+							</div>
+						</div>
+						<div class="product-item" style="background-image: url(img/03.jpg);">
+							<div class="product-item__content">
+								<h3>Изготовление персональных элементов</h3>
+							</div>
+						</div>
+						<div class="product-item" style="background-image: url(img/04.jpg);">
+							<div class="product-item__content">
+								<h3>Кожаные ремешки <br> для Apple Watch</h3>
+							</div>
+						</div>
+						<div class="product-item" style="background-image: url(img/05.jpg);">
+							<div class="product-item__content">
+								<h3>Чехлы из карбона</h3>
+							</div>
+						</div>
+						<div class="product-item" style="background-image: url(img/06.jpg);">
+							<div class="product-item__content">
+								<h3>Обложки для документов</h3>
+							</div>
+						</div>
+						<div class="product-item" style="background-image: url(img/07.jpg);">
+							<div class="product-item__content">
+								<h3>Чехлы-книжки</h3>
+							</div>
+						</div>
+					</div>
 				</div>
 
 			</div>
-		</div>
-	</section>
-	<section class="fixed">
-		<div class="fixed__wrapper">
+		</section>
+		</section>
+		<!-- Блок с акцией -->
+		<section class="action" style="background-image: url(img/pack.jpg);">
+			<div class="action__wrapper">
+				<div class="container">
+					<div class="action__row">
+						<div class="action__img" style="background-image: url(img/pack-big.jpg);"></div>
+						<div class="action__content">
+							<h2>Упаковка в подарок!</h2>
+							<p class="action__text">По статистике, большая часть наших изделий служит в качестве подарков близким
+								людям,
+								коллегам, или руководителям. Мы ценим наших клиентов, и именно поэтому рады сообщить о введении новой
+								акции
+								– «Бесплатная подарочная упаковка для каждого изделия» </p>
+							<div class="arrow-link">
+								<a href="#">Получить упаковку прямо сейчас
+									<span class="arrow-link__arrow"></span>
+									<span class="arrow-link__img">
+										<svg width="13" height="25" viewBox="0 0 15 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M1 26L13.5 13.5L0.999999 1" />
+										</svg>
+									</span>
+								</a>
 
-			<div class="fixed__items">
-				<div class="fixed-block">
-					<h2>Мы знаем, как привлечь внимание к вашей персоне</h2>
-					<div class="fixed-block__cta">
-						<span class="fixed-block__icon"><img src="img/fixed-icon.svg" alt=""></span>
-						<span class="fixed-block__text">Просто листайте вниз</span>
+							</div>
+						</div>
 					</div>
 				</div>
-				<div class="fixed__item" style="background-image: url(img/01.jpg);">
-					<h3>Чехлы из натуральной кожи</h3>
-					<!-- 
-					<img src="img/01.jpg" alt="Чехлы из
-						натуральной кожи"> -->
+			</div>
+		</section>
+		<!-- Блок “Последние работы” -->
+		<section class="works">
+			<div class="container">
+				<h2 id="works">Последние работы</h2>
+				<div class="works__link">
+					<a href="#">Смотреть все</a>
 				</div>
-				<div class="fixed__item" style="background-image: url(img/02.jpg);">
-					<h3>Кастомные Airpods</h3>
-					<!-- <img src="img/02.jpg" alt="Кастомные Airpods"> -->
+				<div class="works__text">Кликните на изображение для подробной информации</div>
+			</div>
+			<div class="works__slider">
+				<div class="works-slide">
+					<div class="works-slide__wrapper">
+						<div class="works-slide__product" style="background-image: url(img/slider-last-works/work-3.jpg);">
+							<div class="works-slide__content">
+								<div class="works-slide__title">Кожаный чехол</div>
+								<div class="works-slide__line"></div>
+								<div class="works-slide__desc">Чехол из питона с инициалами</div>
+							</div>
+						</div>
+						<div class="works-slide__btn"><a href="#">Я хочу такой же!</a></div>
+					</div>
 				</div>
-				<div class="fixed__item" style="background-image: url(img/03.jpg);">
-					<h3>Изготовление персональных элементов</h3>
-					<!-- <img src="img/03.jpg" alt="Изготовление персональных элементов"> -->
+				<div class="works-slide">
+					<div class="works-slide__wrapper">
+						<div class="works-slide__product" style="background-image: url(img/slider-last-works/work-2.jpg);">
+							<div class="works-slide__content">
+								<div class="works-slide__title">Название модели</div>
+								<div class="works-slide__line"></div>
+								<div class="works-slide__desc">Короткое описание чехла</div>
+							</div>
+						</div>
+						<div class="works-slide__btn"><a href="#">Я хочу такой же!</a></div>
+					</div>
 				</div>
-				<div class="fixed__item" style="background-image: url(img/04.jpg);">
-					<h3>Кожаные ремешки для Apple Watch</h3>
-					<!-- <img src="img/04.jpg" alt="Кожаные ремешки для Apple Watch"> -->
+				<div class="works-slide">
+					<div class="works-slide__wrapper">
+						<div class="works-slide__product" style="background-image: url(img/slider-last-works/work-4.jpg);">
+							<div class="works-slide__content">
+								<div class="works-slide__title">Название модели</div>
+								<div class="works-slide__line"></div>
+								<div class="works-slide__desc">Короткое описание чехла</div>
+							</div>
+						</div>
+						<div class="works-slide__btn"><a href="#">Я хочу такой же!</a></div>
+					</div>
 				</div>
-				<div class="fixed__item" style="background-image: url(img/05.jpg);">
-					<h3>Чехлы из карбона</h3>
-					<!-- <img src="img/05.jpg" alt="Чехлы из карбона"> -->
+				<div class="works-slide">
+					<div class="works-slide__wrapper">
+						<div class="works-slide__product"
+							style="background-image: url(img/slider-last-works/flip-pod-kroko-2.jpg);">
+							<div class="works-slide__content">
+								<div class="works-slide__title">Название модели</div>
+								<div class="works-slide__line"></div>
+								<div class="works-slide__desc">Короткое описание чехла</div>
+							</div>
+						</div>
+						<div class="works-slide__btn"><a href="#">Я хочу такой же!</a></div>
+					</div>
 				</div>
-				<div class="fixed__item" style="background-image: url(img/06.jpg);">
-					<h3>Обложки <br> для документов</h3>
-					<!-- <img src="img/06.jpg" alt="Обложки для документов"> -->
+				<div class="works-slide">
+					<div class="works-slide__wrapper">
+						<div class="works-slide__product" style="background-image: url(img/slider-last-works/IMG_3730.jpg);">
+							<div class="works-slide__content">
+								<div class="works-slide__title">Название модели</div>
+								<div class="works-slide__line"></div>
+								<div class="works-slide__desc">Короткое описание чехла</div>
+							</div>
+						</div>
+						<div class="works-slide__btn"><a href="#">Я хочу такой же!</a></div>
+					</div>
 				</div>
-				<div class="fixed__item" style="background-image: url(img/07.jpg);">
-					<h3>Чехлы-книжки</h3>
-					<!-- <img src="img/07.jpg" alt="Чехлы-книжки"> -->
+				<div class="works-slide">
+					<div class="works-slide__wrapper">
+						<div class="works-slide__product" style="background-image: url(img/slider-last-works/IMG_4623.jpg);">
+							<div class="works-slide__content">
+								<div class="works-slide__title">Название модели</div>
+								<div class="works-slide__line"></div>
+								<div class="works-slide__desc">Короткое описание чехла</div>
+							</div>
+						</div>
+						<div class="works-slide__btn"><a href="#">Я хочу такой же!</a></div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Блок “Отзывы” -->
+		<section class="reviews">
+			<div class="container">
+				<h2>Нам доверяют</h2>
+				<div class="reviews-slider__wrapper">
+					<div class="reviews-slider__text"></div>
+					<div class="reviews-slider">
+						<div class="reviews-slide">
+							<div class="reviews-slide__img" style="background-image: url(img/reviews-1.jpg);"></div>
+							<!-- <img src="img/reviews-1.jpg" alt=""> -->
+						</div>
+						<div class="reviews-slide">
+							<div class="reviews-slide__img" style="background-image: url(img/reviews-1.jpg);"></div>
+							<!-- <img src="img/reviews-1.jpg" alt=""> -->
+						</div>
+						<div class="reviews-slide">
+							<div class="reviews-slide__img" style="background-image: url(img/reviews-1.jpg);"></div>
+							<!-- <img src="img/reviews-1.jpg" alt=""> -->
+						</div>
+					</div>
 				</div>
 
+				<div class="reviews__text">
+					<p>Уверенность в <span>Majoroff</span> лежит не только в том, что мы занимаемся своими делом уже более 10 лет.
+						Также мы можем подкрепить ее положительными отзывами нашим клиентов (которых более 10 000), которые не
+						оставят
+						в вас ни капли сомнения в нашем бренде.</p>
+					<p>Одно из наших кредо — эмпатия к нашим клиентам. Мы никогда не возьмем у вас просто картинку, которую вы
+						скинули, чтобы распечатать, и просто распечатаем. Мы обязательно проконсультируем вас во всех вопросах, даже
+						в
+						тех, что вы не зададите!) </p>
+				</div>
+				<!-- <div class="reviews__link"><a href="#">Просмотреть больше отзывов</a>
+					<div class="reviews__arrow"></div>
+				</div> -->
 			</div>
-		</div>
+		</section>
+		<!-- Блок “FAQ” -->
+		<section class="">
+			<div class="container">
 
-	</section>
-	<section class="pack">
-		<div class="container">
-			<div class="pack__row">
-				<div class="pack__img"></div>
-				<div class="pack__content">
-					<h2>Упаковка в подарок!</h2>
-					<p class="pack__text">По статистике, большая часть наших изделий служит в качестве подарков близким людям,
-						коллегам, или руководителям. Мы ценим наших клиентов, и именно поэтому рады сообщить о введении новой акции
-						– «Бесплатная подарочная упаковка для каждого изделия» </p>
-					<div class="pack__link"><a href="#">Получить упаковку прямо сейчас</a>
-						<div class="pack__arrow"></div>
-					</div>
-				</div>
 			</div>
-		</div>
-	</section>
-	<section class="works">
-		<div class="container">
-			<h2>Последние работы</h2>
-			<div class="works__link">
-				<a href="#">Смотреть все</a>
+		</section>
+		<!--  Блок “Контакты” -->
+		<section class="">
+			<div class="container">
+
 			</div>
-			<div class="works__text">Кликните на изображение для подробной информации</div>
-		</div>
-		<div class="works__slider">
-			<div class="works-slide">
-				<div class="works-slide__wrapper">
-					<div class="works-slide__product" style="background-image: url(img/slider-last-works/work-3.jpg);">
-						<div class="works-slide__content">
-							<div class="works-slide__title">Кожаный чехол</div>
-							<div class="works-slide__line"></div>
-							<div class="works-slide__desc">Чехол из питона с инициалами</div>
-						</div>
-					</div>
-					<div class="works-slide__btn"><a href="#">Я хочу такой же!</a></div>
-				</div>
+		</section>
+		<!-- Блок “Продажа франшизы” -->
+		<section class="">
+			<div class="container">
+
 			</div>
-			<div class="works-slide">
-				<div class="works-slide__wrapper">
-					<div class="works-slide__product" style="background-image: url(img/slider-last-works/work-2.jpg);">
-						<div class="works-slide__content">
-							<div class="works-slide__title">Название модели</div>
-							<div class="works-slide__line"></div>
-							<div class="works-slide__desc">Короткое описание чехла</div>
-						</div>
-					</div>
-					<div class="works-slide__btn"><a href="#">Я хочу такой же!</a></div>
-				</div>
-			</div>
-			<div class="works-slide">
-				<div class="works-slide__wrapper">
-					<div class="works-slide__product" style="background-image: url(img/slider-last-works/work-4.jpg);">
-						<div class="works-slide__content">
-							<div class="works-slide__title">Название модели</div>
-							<div class="works-slide__line"></div>
-							<div class="works-slide__desc">Короткое описание чехла</div>
-						</div>
-					</div>
-					<div class="works-slide__btn"><a href="#">Я хочу такой же!</a></div>
-				</div>
-			</div>
-			<div class="works-slide">
-				<div class="works-slide__wrapper">
-					<div class="works-slide__product" style="background-image: url(img/slider-last-works/flip-pod-kroko-2.jpg);">
-						<div class="works-slide__content">
-							<div class="works-slide__title">Название модели</div>
-							<div class="works-slide__line"></div>
-							<div class="works-slide__desc">Короткое описание чехла</div>
-						</div>
-					</div>
-					<div class="works-slide__btn"><a href="#">Я хочу такой же!</a></div>
-				</div>
-			</div>
-			<div class="works-slide">
-				<div class="works-slide__wrapper">
-					<div class="works-slide__product" style="background-image: url(img/slider-last-works/IMG_3730.jpg);">
-						<div class="works-slide__content">
-							<div class="works-slide__title">Название модели</div>
-							<div class="works-slide__line"></div>
-							<div class="works-slide__desc">Короткое описание чехла</div>
-						</div>
-					</div>
-					<div class="works-slide__btn"><a href="#">Я хочу такой же!</a></div>
-				</div>
-			</div>
-			<div class="works-slide">
-				<div class="works-slide__wrapper">
-					<div class="works-slide__product" style="background-image: url(img/slider-last-works/IMG_4623.jpg);">
-						<div class="works-slide__content">
-							<div class="works-slide__title">Название модели</div>
-							<div class="works-slide__line"></div>
-							<div class="works-slide__desc">Короткое описание чехла</div>
-						</div>
-					</div>
-					<div class="works-slide__btn"><a href="#">Я хочу такой же!</a></div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section class="reviews">
-		<div class="container">
-			<h2>Нам доверяют</h2>
-			<div class="reviews-slider__text"></div>
-			<div class="reviews-slider">
-				<div class="reviews-slide">
-					<img src="img/reviews-1.jpg" alt="">
-				</div>
-				<div class="reviews-slide">
-					<img src="img/reviews-1.jpg" alt="">
-				</div>
-				<div class="reviews-slide">
-					<img src="img/reviews-1.jpg" alt="">
-				</div>
-			</div>
-			<div class="reviews__text">
-				<p>Уверенность в <span>Majoroff</span> лежит не только в том, что мы занимаемся своими делом уже более 10 лет.
-					Также мы можем подкрепить ее положительными отзывами нашим клиентов (которых более 10 000), которые не оставят
-					в вас ни капли сомнения в нашем бренде.</p>
-				<p>Одно из наших кредо — эмпатия к нашим клиентам. Мы никогда не возьмем у вас просто картинку, которую вы
-					скинули, чтобы распечатать, и просто распечатаем. Мы обязательно проконсультируем вас во всех вопросах, даже в
-					тех, что вы не зададите!) </p>
-			</div>
-			<div class="reviews__link"><a href="#">Просмотреть больше отзывов</a>
-				<div class="reviews__arrow"></div>
-			</div>
-		</div>
-	</section>
+		</section>
+	</main>
+	<!-- Футер -->
 	<footer>
 		<div class="container"></div>
 	</footer>

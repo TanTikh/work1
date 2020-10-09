@@ -24,7 +24,7 @@
 			width: 375px;
 			height: 1px;
 			position: absolute;
-			top: 100%;
+			top: 100px;
 			left: -120px;
 			background: rgba(188, 168, 83, 0.9);
 			@media (max-width: $md1+px) {
@@ -90,7 +90,7 @@
 				height: 1px;
 				position: absolute;
 				right: 0;
-				bottom: 0;
+				bottom: -9px;
 				background-color: $color-black;
 				transition: all 0.3s ease 0s;
 				@media (max-width: $md1+px) {
@@ -146,7 +146,7 @@
 		position: relative;
 		display: flex;
 		justify-content: space-between;
-		margin-top: 70px;
+		margin-top: 66px;
 		@media (max-width: $md1+px) {
 			margin-top: 66px;
 		}
@@ -199,13 +199,6 @@
 		}
 	}
 
-	// &__slide {
-	// 	position: relative;
-	// 	min-height: 726px;
-	// 	width: 100%;
-	// 	padding: 0px 2.5px;
-	// }
-
 	.slick-list {
 		overflow: hidden;
 	}
@@ -219,7 +212,8 @@
 			margin: 0px 4px;
 		}
 		@media (max-width: 1199px) {
-			margin: 0px 7.5px;
+			// margin: 0px 7.5px;
+			margin: 0px 10px;
 		}
 		@media (max-width: $md2+px) {
 			min-width: 352px;

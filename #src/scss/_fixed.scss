@@ -1,14 +1,12 @@
 .fixed {
+	width: 100%;
+	min-height: 900px;
+	position: relative;
 	background-color: $color-black;
 	color: $color-white;
 	h2,
 	h3 {
 		color: $color-white;
-	}
-	&__wrapper {
-		// max-width: 1600px;
-		// margin: 0 auto;
-		position: relative;
 	}
 
 	&__items {
@@ -33,24 +31,15 @@
 	&__item {
 		position: relative;
 		z-index: 2;
-		min-width: 50%;
-		width: 812px;
+		// min-width: 812px;
+		width: 50.75%;
 		height: 700px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
-		// transition: background-size 1s linear 0s;
-		// @media (min-width: 992px) {
-		// 	&:hover {
-		// 		background-size: 104%;
-		// 		transition: background-size 1s linear 0s;
-		// 	}
-		// }
+
 		@media (max-width: $md1+px) {
-			width: 600px;
+			width: 50%;
 			height: 550px;
 		}
 		@media (max-width: 1199px) {
@@ -67,110 +56,42 @@
 		@media (max-width: $md4+px) {
 			height: 301px;
 		}
-		&::after {
-			content: "";
+
+		&-content {
 			width: 100%;
 			height: 100%;
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 			background-color: rgba(28, 27, 27, 0.75);
 		}
 		h3 {
-			width: 553px;
-			position: relative;
-			z-index: 3;
+			flex: 1 1 auto;
+			// max-width: 80%;
+			padding: 0px 50px;
 			text-align: center;
-			@media (max-width: $md2+px) {
-				max-width: 100%;
-			}
-		}
-	}
-}
-.fixed__item:nth-child(2) {
-	h3 {
-		max-width: 470px;
-		@media (max-width: $md1+px) {
-			max-width: 410px;
-		}
-		@media (max-width: 1199px) {
-			max-width: 100%;
-		}
-		@media (max-width: $md2+px) {
-			max-width: 100%;
-		}
-		@media (max-width: $md3+px) {
-			max-width: 320px;
-		}
-		@media (max-width: $md4+px) {
-			max-width: 225px;
-		}
-	}
-}
-.fixed__item:nth-child(4) {
-	h3 {
-		@media (max-width: $md1+px) {
-			max-width: 460px;
-		}
-		@media (max-width: 1199px) {
-			max-width: 600px;
-		}
-		@media (max-width: $md2+px) {
-			max-width: 500px;
-		}
-		@media (max-width: $md3+px) {
-			max-width: 400px;
-		}
-		@media (max-width: $md4+px) {
-			max-width: 257px;
 		}
 	}
 }
 
-.fixed__item:nth-child(5) {
-	h3 {
-		max-width: 480px;
-		@media (max-width: $md1+px) {
-			max-width: 410px;
-		}
-		@media (max-width: $md2+px) {
-			max-width: 355px;
-		}
-		@media (max-width: $md3+px) {
-			max-width: 320px;
-		}
-		@media (max-width: $md4+px) {
-			max-width: 230px;
-		}
-	}
-}
-// .line {
-// 	width: 100%;
-// 	height: 1px;
-// 	background-color: #000;
-// 	position: fixed;
-// }
 .fixed-block {
+	border: 1px solid red;
 	position: absolute;
+	// position: relative;
 	top: 0;
-	left: 0;
+	right: 50.75%;
 	z-index: 2;
-	min-width: 50%;
-	width: 788px;
+	width: 49.25%;
+
 	height: 100vh;
-	// height: 900px;
-	// min-height: 100vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	// background-color: #1c1b1b;
 	background-color: transparent;
 	transition: all 0.8s linear 0s;
 	@media (max-width: $md1+px) {
-		width: 600px;
+		width: 50%;
 		// height: 675px;
 	}
 	@media (max-width: 1199px) {
@@ -206,34 +127,59 @@
 	// border: 1px solid red;
 
 	&__cta {
-		width: 200px;
+		display: flex;
+		width: 204px;
 		margin-top: 41px;
+		position: relative;
 		@media (max-width: 1199px) {
 			display: none;
 		}
 	}
 
-	// &__icon {
-	// 	// margin-left: -3px;
-	// }
-
+	&__icon {
+		position: absolute;
+		top: 0;
+		left: 0;
+		animation: fixed__icon 2.5s linear infinite;
+	}
+	@keyframes fixed__icon {
+		0% {
+			margin-top: 3px;
+		}
+		25% {
+			margin-top: 0;
+		}
+		50% {
+			margin-top: -9px;
+		}
+		75% {
+			margin-top: 0;
+		}
+		100% {
+			margin-top: 3px;
+		}
+	}
 	&__text {
 		line-height: 28px;
-		margin-left: 16px;
+		margin-left: 40px;
 	}
 }
 @media (min-width: 1199px) {
 	.sticky {
 		position: fixed;
-		top: 0;
+		// position: sticky;
+		right: 50.75%;
+		// top: 0;
 		bottom: 0;
-		left: 0;
+		// left: 0;
+		// right: 50.75%;
 		transition: all 0.8s linear 0s;
 	}
 	.off-sticky {
 		position: absolute;
 		top: auto;
 		left: 0;
+		// right: 50.75%;
 		bottom: 0;
 		z-index: 1;
 		transition: all 0.8s linear 0s;
