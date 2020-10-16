@@ -1,0 +1,206 @@
+.popup {
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9;
+
+	&__overlay {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: rgba(28, 27, 27, 0.8);
+		@media (max-width: $md4+px) {
+			background-color: #fff;
+		}
+	}
+
+	&__block {
+		width: 800px;
+		height: 648px;
+		max-height: 100vh;
+		padding: 30px;
+		background: $color-white;
+		overflow: auto;
+		@media (max-width: $md2+px) {
+			width: 100%;
+		}
+		@media (max-width: $md3+px) {
+			// height: 100%;
+			padding: 18px;
+		}
+		@media (max-width: $md4+px) {
+			height: 570px;
+			max-height: 100%;
+		}
+	}
+
+	&__close {
+		width: 100%;
+		height: 25px;
+		display: flex;
+		justify-content: flex-end;
+		cursor: pointer;
+	}
+
+	&__content {
+		padding: 5px 0px 0px 20px;
+		@media (max-width: $md3+px) {
+			padding-left: 0px;
+		}
+		@media (max-width: $md4+px) {
+			padding-top: 25px;
+		}
+		h3 {
+			position: relative;
+			padding-bottom: 16px;
+			@media (max-width: $md4+px) {
+				padding-bottom: 10px;
+			}
+			&::after {
+				position: absolute;
+				content: "";
+				width: 303px;
+				height: 1px;
+				left: -50px;
+				bottom: 0;
+				background: $color-golden;
+				opacity: 0.95;
+
+				@media (max-width: $md4+px) {
+					width: 100%;
+					left: 0;
+				}
+			}
+		}
+	}
+
+	&__desc {
+		margin: 16px 0px 29px 0px;
+		@media (max-width: $md4+px) {
+			margin: 16px 0px;
+		}
+	}
+
+	&__input {
+		width: 550px;
+		height: 50px;
+		border: 1px solid $color-golden;
+		margin-bottom: 15px;
+		@media (max-width: $md3+px) {
+			width: 520px;
+		}
+		@media (max-width: $md4+px) {
+			width: 100%;
+			height: 40px;
+			margin-bottom: 10px;
+		}
+		input {
+			width: 100%;
+			height: 100%;
+			text-transform: uppercase;
+			padding: 0px 25px;
+		}
+	}
+	&__message {
+		width: 550px;
+		height: 120px;
+		border: 1px solid $color-golden;
+		margin-bottom: 28px;
+		@media (max-width: $md3+px) {
+			width: 520px;
+		}
+		@media (max-width: $md4+px) {
+			height: 100px;
+			width: 100%;
+			margin-bottom: 10px;
+		}
+		textarea {
+			width: 100%;
+			height: 100%;
+			overflow: auto;
+			resize: none;
+			text-transform: uppercase;
+			padding: 16px 25px;
+		}
+	}
+	&__btn {
+		width: 269px;
+		height: 80px;
+		margin-right: 40px;
+		background: $color-black;
+		border: none;
+		font-size: 16px;
+		line-height: 20px;
+		color: $color-white;
+		@media (max-width: $md4+px) {
+			width: 192px;
+			height: 57px;
+			font-size: 14px;
+			line-height: 17px;
+			margin: 0 auto;
+		}
+	}
+	&__file {
+		@media (max-width: $md4+px) {
+			margin-bottom: 30px;
+		}
+		input[type="file"] {
+			display: none;
+		}
+		label {
+			padding-bottom: 8px;
+			border-bottom: 1px solid $color-black;
+			background-color: transparent;
+			font-family: "Montserrat-Medium", Arial, Helvetica, sans-serif;
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 20px;
+			text-transform: uppercase;
+			color: $color-black;
+			@media (max-width: $md4+px) {
+				font-size: 12px;
+				line-height: 15px;
+				padding-bottom: 4px;
+			}
+		}
+	}
+	&__footer {
+		@media (max-width: $md4+px) {
+			display: flex;
+			flex-direction: column-reverse;
+		}
+	}
+	input,
+	input::placeholder,
+	input::-webkit-input-placeholder,
+	input::-moz-placeholder,
+	input:-moz-placeholder,
+	input:-ms-input-placeholder,
+	textarea,
+	textarea::placeholder,
+	textarea::-webkit-input-placeholder,
+	textarea::-moz-placeholder,
+	textarea:-moz-placeholder,
+	textarea:-ms-input-placeholder {
+		color: rgba(28, 27, 27, 0.5);
+		// text-transform: uppercase;
+	}
+	//  - для файерфокс цвет текста задаем просто инпуту
+	// Убираем placeholder при нажатии на поле:
+	input:focus::placeholder,
+	input:focus::-webkit-input-placeholder,
+	input:focus::-moz-placeholder,
+	input:focus:-moz-placeholder,
+	input:focus:-ms-input-placeholder,
+	textarea:focus::placeholder,
+	textarea:focus::-webkit-input-placeholder,
+	textarea:focus::-moz-placeholder,
+	textarea:focus:-moz-placeholder,
+	textarea:focus:-ms-input-placeholder {
+		color: rgba(0, 0, 0, 0);
+	}
+}

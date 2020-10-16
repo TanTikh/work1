@@ -117,6 +117,7 @@ a {
 
 	@media (min-width: 992px) {
 		&:hover {
+			color: $color-golden;
 			transition: all 0.3s ease 0s;
 		}
 	}
@@ -173,10 +174,27 @@ h4 {
 	font-size: 28px;
 	line-height: 38px;
 	color: $color-white;
+	@media (max-width: $md2+px) {
+		font-size: 24px;
+		line-height: 33px;
+	}
+	@media (max-width: $md3+px) {
+		font-size: 20px;
+		line-height: 27px;
+	}
+	@media (max-width: $md4+px) {
+		font-size: 16px;
+		line-height: 22px;
+	}
 }
 
 .arrow-link {
+	width: 436px;
+	@media (max-width: $md4+px) {
+		max-width: 290px;
+	}
 	a {
+		width: 100%;
 		display: inline-block;
 		position: relative;
 		font-family: "Montserrat-Medium", Arial, Helvetica, sans-serif;
@@ -199,7 +217,8 @@ h4 {
 	}
 	&__arrow {
 		display: inline-block;
-		width: 436px;
+
+		width: 100%; // width: 436px;
 		height: 1px;
 		background: $color-golden;
 
@@ -219,10 +238,12 @@ h4 {
 		width: 13px;
 		height: 25px;
 		position: absolute;
-		top: 22px;
-		left: 425px;
+		top: 16px;
+		// left: 425px;
+		right: -2px;
 		@media (max-width: 1199px) {
-			left: 460px;
+			right: -37px;
+			top: 16px;
 		}
 		@media (max-width: $md3+px) {
 			top: 16px;
@@ -285,6 +306,17 @@ h4 {
 @import "_works";
 /* =========================Отзывы=============================*/
 @import "_reviews";
+/*==============================Блок “FAQ”=====================*/
+@import "_faq";
+/*==============================Блок “Контакты”=====================*/
+@import "_map";
+/*==============================франшиза=====================*/
+@import "_fran";
+/*==============================футер=====================*/
+@import "_footer";
+/*==============================форма=====================*/
+@import "_popup";
+
 /*============================медиа-запросы==============================*/
 
 // ============================================меню бургер

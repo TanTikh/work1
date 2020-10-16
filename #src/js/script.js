@@ -16,43 +16,11 @@ $(document).ready(function () {
 		$("html, body").animate({ scrollTop: targetBlockScrollHeight }, 2000);
 	});
 
+	$('.footer-logo').on('click', function (e) {
+		e.preventDefault();
+		$("html, body").animate({ scrollTop: 0 }, 2000);
+	});
 	/*фиксированный блок*/
-	// (function stickyBlock() {
-	// 	var fixedBlockHeight = $('.fixed-block').height();
-	// 	var fixedItemsHeight = $('.fixed__items').height();
-	// 	// var fixedBlockOffset = $('.fixed').offset();
-	// 	// var fixedBlockOffsetTop = fixedBlockOffset.top;
-	// 	var fixedBlockOffset = $('.fixed-block').offset();
-	// 	var fixedBlockOffsetTop = fixedBlockOffset.top;
-	// 	//высота скролла до фикс блока+(высота картинок-высота фикс блока)
-	// 	var offsetSum = fixedBlockOffsetTop + (fixedItemsHeight - fixedBlockHeight);
-	// 	var offsetFullSum = fixedBlockOffsetTop + fixedItemsHeight;
-	// 	$(window).scroll(function () {
-	// 		// console.log(fixedBlockOffsetTop);
-	// 		// console.log(fixedBlockOffsetTop + 55);
-
-	// 		//если высота скролла больше чем расстояние сверху до фикс блока и меньше чем до конца секции минус высота фикс блока
-	// 		if ($(window).scrollTop() >= fixedBlockOffsetTop && $(window).scrollTop() <= offsetSum || $(window).scrollTop() <= offsetSum && $('.fixed-block').hasClass('off-sticky')) {
-	// 			$('.fixed-block').removeClass('off-sticky');
-	// 			$('.fixed-block').addClass('sticky');
-	// 			//если высота скролла больше чем сумма расстояния до блока и высоты секции минус высота блока
-	// 		} else if ($(window).scrollTop() >= offsetSum) {
-	// 			$('.fixed-block').removeClass('sticky');
-	// 			$('.fixed-block').addClass('off-sticky');
-	// 			//если высота скролла меньше суммы расстояний
-	// 		}
-	// 		// else if ($(window).scrollTop() <= offsetSum) {
-	// 		// 	$('.fixed-block').removeClass('off-sticky');
-	// 		// 	// $('.fixed-block').addClass('sticky');
-	// 		// }
-	// 		else if ($(window).scrollTop() < fixedBlockOffsetTop && $('.fixed-block').hasClass('sticky')) {
-	// 			$('.fixed-block').removeClass('sticky');
-	// 		}
-	// 	});
-
-	// }());
-
-
 	(function stickyBlock() {
 		var fixedSectionHeight = $('.product').height();
 		var fixedBlockHeight = $('.product-about__fixed').height();
@@ -89,24 +57,29 @@ $(document).ready(function () {
 			{
 				breakpoint: 1599.98,
 				settings: {
-					centerPadding: '25px'
+					centerMode: true,
+					centerPadding: '25px',
+					slidesToShow: 3,
+					slidesToScroll: 3
 				}
 			},
 			{
 				breakpoint: 1199.98,
 				settings: {
-					// centerMode: true,
-					centerPadding: '1px'
+					centerMode: false,
+					// centerPadding: '1px',
+					slidesToShow: 3,
+					slidesToScroll: 3
 				}
 			},
 
 			{
-				breakpoint: 992,
+				breakpoint: 991.98,
 				settings: {
 					centerMode: false,
-					centerPadding: '0px',
+					// centerPadding: '0px',
 					slidesToShow: 2,
-					slidesToScroll: 1
+					slidesToScroll: 2
 				}
 			},
 			{
@@ -136,9 +109,34 @@ $(document).ready(function () {
 
 	$('.reviews-slider').slick({
 		infinite: true,
+		centerMode: true,
+		centerPadding: '2px',
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		arrows: true,
+		responsive: [
+
+			{
+				breakpoint: 1199.98,
+				settings: {
+					arrows: false
+				}
+			},
+
+
+		]
 	});
+	$('.faq-item').eq(0).addClass("open").find('.faq-item__answer').slideDown(400);
+	$('.faq-item__question').on('click', function (e) {
+
+		if ($(this).parent().hasClass('open')) {
+			return;
+		} else {
+			$('.faq-item').removeClass('open').find('.faq-item__answer').slideUp(400);
+			$(this).parent().addClass('open').find('.faq-item__answer').slideDown(400);
+		}
+
+	});
+
 
 });
