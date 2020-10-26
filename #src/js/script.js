@@ -180,7 +180,8 @@ $(document).ready(function () {
 	showPopup('.popup-link', '.popup-file', '.popup-file .popup__close');
 	showPopup('.popup-link-w', '.popup-want', '.popup-want .popup__close');
 	showPopup('.f-cont__btn', '.popup-fr', '.popup-fr .popup__close');
-	showPopup('.cat-popup-link', '.popup-file', '.popup-file .popup__close');
+	showPopup('.cat-popup-link', '.cat-popup-file', '.cat-popup-file .popup__close');
+	showPopup('.cat-popup-link-w', '.cat-popup-want', '.cat-popup-want .popup__close');
 
 
 	// inputmask

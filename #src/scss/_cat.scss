@@ -1,0 +1,45 @@
+.cat {
+	&__wrapper {
+		display: flex;
+	}
+}
+.container {
+}
+.cat-filter {
+	flex: 0 0 20%;
+	max-width: 20%;
+}
+.cat-main {
+	max-width: 75%;
+	flex: 0 0 75%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.goods-card {
+	max-width: 28%;
+	flex: 0 0 28%;
+
+	&__img {
+	}
+
+	&__body {
+	}
+
+	&__categories {
+	}
+
+	&__name {
+	}
+
+	&__desc {
+	}
+
+	&__prices {
+	}
+
+	&__btn {
+	}
+}
+.cat-popup-link-w {
+}
