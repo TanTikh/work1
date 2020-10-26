@@ -1,4 +1,5 @@
 
+// const projectFolder = "C:/Users/-user-/Downloads/OpenServer/domains/new-majoroff",
 const projectFolder = require("path").basename(__dirname),
 	sourceFolder = "#src";
 
@@ -9,19 +10,24 @@ const path = {
 		js: projectFolder + "/js/",
 		img: projectFolder + "/img/",
 		fonts: projectFolder + "/fonts/",
+		php: projectFolder + "/",
+		phpMailer: projectFolder + "/phpmailer/"
 	},
 	src: {
 		html: [sourceFolder + "/*.html", "!" + sourceFolder + "/_*.html"],
-		css: sourceFolder + "/scss/style.scss",
+		css: [sourceFolder + "/scss/**/*.scss", "!" + sourceFolder + "/scss/**/_*.scss"], // sourceFolder + "/scss/style.scss"
 		js: sourceFolder + "/js/**/*.js",
 		img: sourceFolder + "/img/**/*.{jpg,png,svg,gif,ico}",
 		fonts: sourceFolder + "/fonts/*.ttf",
+		php: sourceFolder + "/*.php",
+		phpMailer: sourceFolder + "/phpmailer/*.php"
 	},
 	watch: {
 		html: sourceFolder + "/**/*.html",
 		css: sourceFolder + "/scss/**/*.scss",
 		js: sourceFolder + "/js/**/*.js",
-		img: sourceFolder + "/img/**/*.{jpg,png,svg,gif,ico}"
+		img: sourceFolder + "/img/**/*.{jpg,png,svg,gif,ico}",
+		php: sourceFolder + "/*.php",
 	},
 	clean: "./" + projectFolder + "/"
 }
@@ -43,22 +49,24 @@ const { src, dest } = require('gulp'),
 	include = require('gulp-include');
 
 
-// function done(cb){
-// 	cb();
-// }
+
 
 function clean() {
 	return del(path.clean);
 }
 
-function browserSync(params) {
+
+
+function browserSync(done) {
 	browsersync.init({
 		server: {
-			baseDir: "./" + projectFolder + "/"
+			// baseDir: "./" + projectFolder + "/"
+			baseDir: projectFolder
 		},
 		port: 3000,
 		notify: false
 	})
+	done();
 }
 
 function html() {
@@ -68,6 +76,20 @@ function html() {
 		// .pipe(browsersync.stream());
 		.on("end", browsersync.reload);
 
+}
+function php() {
+	return src(path.src.php)
+		// .pipe(include())
+		.pipe(dest(path.build.php))
+		// .pipe(browsersync.stream());
+		.on("end", browsersync.reload);
+}
+function phpMailer() {
+	return src(path.src.phpMailer)
+		// .pipe(include())
+		.pipe(dest(path.build.phpMailer))
+		// .pipe(browsersync.stream());
+		.on("end", browsersync.reload);
 }
 
 function css() {
@@ -147,20 +169,25 @@ function fonts() {
 };
 
 
-function watchFiles() {
+function watchFiles(done) {
 
 	gulp.watch([path.watch.html], html);
 	gulp.watch([path.watch.css], css);
 	gulp.watch([path.watch.js], js);
 	gulp.watch([path.watch.img], images);
+	gulp.watch([path.watch.php], php);
+	done();
 }
 // function cb() { }
 
-const build = gulp.series(clean, gulp.parallel(html, css, js, images, fonts));
+const build = gulp.series(clean, gulp.parallel(html, css, js, images, fonts, php, phpMailer));
 const watch = gulp.parallel(build, watchFiles, browserSync);
 
 
+
 exports.fonts = fonts;
+// exports.PHPMailer = PHPMailer;
+// exports.php = php;
 exports.images = images;
 exports.js = js;
 exports.css = css;

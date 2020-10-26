@@ -46,8 +46,6 @@
 		}
 	}
 	h2 {
-		position: relative;
-		// margin-left: 80px;
 		margin: 50px 0px 0px 88px;
 		@media (max-width: $md1+px) {
 			display: inline-block;
@@ -70,29 +68,8 @@
 			margin-bottom: 29px;
 		}
 		&::after {
-			content: "";
-			width: 375px;
-			height: 1px;
-			position: absolute;
-			top: 100px;
-			left: -120px;
-			background: rgba(188, 168, 83, 0.9);
-			@media (max-width: $md1+px) {
-				width: 340px;
-				top: 120%;
-			}
-			@media (max-width: 1199px) {
-				top: 112%;
-				left: -108px;
-			}
-			@media (max-width: $md2+px) {
-				width: 331px;
-				left: -24px;
-				top: 124%;
-			}
 			@media (max-width: $md3+px) {
 				width: 300px;
-
 				left: 50%;
 				transform: translate(-50%, 0%);
 			}
@@ -339,34 +316,21 @@
 	}
 }
 .reviews-slide {
-	// border: 1px solid red;
 	width: 100%;
-	@media (max-width: $md3+px) {
-		// width: 540px;
-		// height: 500px;
-		// padding: 0px 5px;
-	}
+
 	&__img {
-		// border: 1px solid red;
-		// width: 764px;
-		// height: 675px;
 		width: 100%;
 		height: 675px;
-		// min-height: 675px;
 		@media (max-width: $md1+px) {
-			// width: 568px;
 			height: 600px;
 		}
 		@media (max-width: 1199px) {
-			// width: 590px;
 			height: 625px;
 		}
 		@media (max-width: $md2+px) {
-			// width: 351px;
 			height: 359px;
 		}
 		@media (max-width: $md3+px) {
-			// width: 540px;
 			height: 500px;
 		}
 		@media (max-width: $md4+px) {
@@ -376,6 +340,4 @@
 		background-size: contain;
 		background-repeat: no-repeat;
 	}
-
-	// background: top center / cover no-repeat;
 }

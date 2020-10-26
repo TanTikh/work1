@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="shortcut icon" href="favicon.ico">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<!-- <meta name="format-detection" content="telephone=no"> -->
+	<title>Премиальные аксессуары с авторским дизайном</title>
+	<meta name="description" content="Премиальные чехлы с авторским дизайном">
+	<meta name="keywords"
+		content="Кейсы, чехлы, авторские, создать, дизайн, клатч, подарочный, набор, аксессуар, аксессуары">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<header class="header cat-header" style="background-image: url(img/bg-01.jpg);">
+		<div class="container">
+			<div class="header__row">
+				<div class="header-top">
+					<div class="header-logo">
+						<a href="/">
+							<div class="header-logo__img">
+								<img src="img/logo.svg" alt="logo">
+							</div>
+							<div class="header-logo__brand">Majoroff</div>
+						</a>
+					</div>
+					<div class="header-contacts">
+						<ul class="header-contacts__socials">
+							<li><a href="#" class="header__link">Vk</a></li>
+							<li><a href="#" class="header__link">In</a></li>
+							<li><a href="#" class="header__link">Fb</a></li>
+						</ul>
+						<div class="header-contacts__line"></div>
+						<div class="header-contacts__calls">
+							<div class="header__phone">
+								<a href="tel:+79096377666" class="header__phone-link header__link">+7 (909) 637-76-66</a>
+							</div>
+							<div class="header__callback">
+								<a href="#" class="header__popup header__link popup-link">Перезвоните мне</a>
+							</div>
+						</div>
+
+					</div>
+					<div class="header__menu-icon">
+						<div></div>
+						<div></div>
+						<div></div>
+					</div>
+				</div>
+				<div class="header-bottom">
+					<div class="header-bottom__content">
+						<h1 class="header-bottom__title">Каталог</h1>
+						<p>
+							Каждый из представленных вариантов дизайна чехлов доступен к заказу на все модели iPhone, Samsung и
+							другие моделей телефонов. Для этого выберите дизайн чехла и в комментарии в форме заказа укажите
+							нужную модель телефона.
+						</p>
+						<h4>Не нашли то, что вам нужно?</h4>
+						<a href="#" class="header-bottom__link cat-popup-link">Закажите чехол с индивидуальным дизайном</a>
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+	</header>
+	<section class="cat">
+		<div class="container">
+			<div class="cat__wrapper">
+				<aside>
+
+				</aside>
+				<main></main>
+			</div>
+
+		</div>
+	</section>
+
+	<footer class="footer">
+		<div class="container">
+			<div class="footer__row">
+				<div class="footer__col">
+					<div class="footer-logo">
+						<a href="#">
+							<div class="footer-logo__img">
+								<img src="img/logo.svg" alt="logo">
+							</div>
+							<div class="footer-logo__brand">Majoroff</div>
+						</a>
+					</div>
+				</div>
+				<div class="footer__col">
+					<div class="footer__title">Социальные сети:</div>
+					<ul class="footer__social">
+						<li><a href="#">Вконтакте</a></li>
+						<li><a href="#">Instagram</a></li>
+						<li><a href="#">Facebook</a></li>
+					</ul>
+				</div>
+				<div class="footer__col">
+					<div class="footer__title">Доп. информация:</div>
+					<ul class="footer__info">
+						<li><a href="#">О нас</a></li>
+						<li><a href="#">Оплата и доставка</a></li>
+						<li><a href="#">Гарантия</a></li>
+						<li><a href="#">Уход</a></li>
+						<li><a href="#">Карта сайта</a></li>
+					</ul>
+				</div>
+				<div class="footer__col">
+					<div class="footer__title">Контакты:</div>
+					<ul class="footer__contacts">
+						<li><a href="#">Taplink</a></li>
+						<li><a href="#">+7(909) 637 76-66</a></li>
+						<li><a href="#">Написать в WhatsApp</a></li>
+						<li><a href="#">majoroff.ru@gmail.com</a></li>
+						<li><a href="#">г. Москва, улица Студенческая, дом 35</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<div class="popup popup-file">
+		<div class="popup__overlay">
+			<div class="popup__block">
+				<div>
+					<div class="popup__close">
+						<svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M1 1L22 22" stroke="#1C1B1B" />
+							<path d="M22 1L0.999999 22" stroke="#1C1B1B" />
+						</svg>
+					</div>
+				</div>
+
+				<div class="popup__content">
+					<h3>Форма обратной связи</h3>
+
+					<div class="popup__desc">Хотите заказать чехол с уникальным дизайном?
+						Просто оставьте заявку и мы вскоре вам перезвоним!</div>
+					<form id="popup-form_file" name="Главная форма" action="send.php" enctype="multipart/form-data"
+						method="POST">
+						<div class="popup__input">
+							<input type="text" name="name" autocomplete="off" placeholder="Ваше имя" required>
+						</div>
+						<div class="popup__input">
+							<input type="tel" name="phone" autocomplete="off" placeholder="Ваш номер телефона" required>
+						</div>
+						<div class="popup__message">
+							<textarea name="message" autocomplete="off" placeholder="Ваши пожелания"></textarea>
+						</div>
+						<div class="popup__footer">
+							<button type="submit" class="popup__btn"> <span class="btn-text">Отправить заявку</span> <span
+									class="send-form">Подождите...</span></button>
+							<div class="popup__file">
+								<label for="file">Прикрепить файл
+									<input id="file" type="file" name="myfile[]" placeholder="Прикрепить файл" multiple
+										accept="image/jpg,image/jpeg,image/png,image/svg">
+								</label>
+								<div class="popup__file-name"></div>
+							</div>
+						</div>
+					</form>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+	<div class="popup popup-want">
+		<div class="popup__overlay">
+			<div class="popup__block">
+				<div>
+					<div class="popup__close">
+						<svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M1 1L22 22" stroke="#1C1B1B" />
+							<path d="M22 1L0.999999 22" stroke="#1C1B1B" />
+						</svg>
+					</div>
+				</div>
+
+				<div class="popup__content">
+					<h3>Форма обратной связи</h3>
+
+					<div class="popup__desc">Хотите заказать такой чехол?
+						Просто оставьте заявку и мы вскоре вам перезвоним!</div>
+					<form id="popup-form_want" name="Форма хочу такой же" action="send.php" enctype="multipart/form-data"
+						method="POST">
+						<div class="popup__input">
+							<input type="text" name="name" autocomplete="off" placeholder="Ваше имя" required>
+						</div>
+						<div class="popup__input">
+							<input type="tel" name="phone" autocomplete="off" placeholder="Ваш номер телефона" required>
+						</div>
+						<div class="popup__message">
+							<textarea name="message" autocomplete="off" placeholder="Ваши пожелания"></textarea>
+						</div>
+						<div class="popup__footer">
+							<button type="submit" class="popup__btn"> <span class="btn-text">Отправить заявку</span> <span
+									class="send-form">Подождите...</span></button>
+						</div>
+					</form>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+	<script src="js/jquery-3.5.1.min.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/jquery.inputmask.js"></script>
+	<script src="js/script.js"></script>
+
+</body>
+
+</html>

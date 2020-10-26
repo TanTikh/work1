@@ -10,22 +10,14 @@
 	@media (max-width: $md2+px) {
 		padding-top: 80px;
 	}
-	// @media (max-width: $md3+px) {
-	// 	padding-top: 62px;
-	// }
 	@media (max-width: $md4+px) {
 		padding-top: 61px;
 	}
 	&__wrapper {
 		position: relative;
 	}
-	&__title {
+	h2 {
 		max-width: 670px;
-		position: relative;
-		padding-bottom: 20px;
-		@media (max-width: $md1+px) {
-			padding-bottom: 17px;
-		}
 		@media (max-width: 1199px) {
 			max-width: 350px;
 		}
@@ -38,32 +30,6 @@
 		}
 		@media (max-width: $md4+px) {
 			padding-bottom: 8px;
-		}
-		&::after {
-			content: "";
-			width: 375px;
-			height: 1px;
-			position: absolute;
-			top: 100%;
-			left: -120px;
-			background: rgba(188, 168, 83, 0.5);
-			@media (max-width: $md1+px) {
-				width: 340px;
-			}
-			@media (max-width: $md2+px) {
-				width: 590px;
-			}
-			@media (max-width: $md3+px) {
-				width: 300px;
-				left: 120px;
-			}
-			@media (max-width: $md4+px) {
-				@media (max-width: $md4+px) {
-					width: 200px;
-					left: 50%;
-					transform: translate(-50%, 0%);
-				}
-			}
 		}
 	}
 
@@ -96,8 +62,6 @@
 		p {
 			margin-bottom: 26px;
 			font-family: $mainFont;
-			// font-weight: 400;
-			// line-height: 25px;
 			color: $color-black;
 
 			@media (max-width: $md3+px) {
@@ -128,21 +92,22 @@
 		left: 57.2%;
 		z-index: 1;
 		width: 670px;
-		height: 800px;
+		// height: 800px;
+		height: 100%;
 		background-position: -150px 0px;
 		background-size: cover;
 		background-repeat: no-repeat;
-		// background: url("../img/intro-1-big.jpg") top center / cover no-repeat;
 
 		@media (max-width: $md1+px) {
 			width: 518px;
-			height: 698px;
+			// height: 698px;
 			top: -17px;
 			left: 55.4%;
 		}
 		@media (max-width: 1199px) {
 			width: 486px;
-			height: 598px;
+			// height: 598px;
+			height: 76%;
 			top: -65px;
 			left: 50.9%;
 		}
@@ -153,13 +118,10 @@
 			left: 51.3%;
 		}
 		@media (max-width: $md3+px) {
-			// background: url("../img/intro-1.jpg") 37% 0% / cover no-repeat;
 			position: static;
 			width: 100%;
 			height: 300px;
 			margin-top: 42px;
-			// top: 42px;
-			// left: 2px;
 			background-position: top center;
 		}
 		@media (max-width: $md4+px) {
@@ -211,12 +173,6 @@
 		@media (max-width: $md4+px) {
 			max-width: 72%;
 			margin-bottom: 30px;
-			// &:nth-child(1) {
-			// 	max-width: 52%;
-			// }
-			// &:nth-child(3) {
-			// 	max-width: 90%;
-			// }
 		}
 	}
 

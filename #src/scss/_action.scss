@@ -101,6 +101,9 @@
 			@media (max-width: $md4+px) {
 				margin-bottom: 7px;
 			}
+			&::after {
+				display: none;
+			}
 		}
 	}
 

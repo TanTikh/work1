@@ -2,56 +2,10 @@
 @import "_reset";
 /*=============================шрифты======================*/
 @import "_tools";
-
-// ===========================переменные
-
-// $mainFont: "", Arial, Helvetica, sans-serif;
-// $maincolor: #000;
-// $accentcolor: #555;
-// $minwidth: 320px;
-// $mw: 1170;
-// $md1: $mw + 40;
-// $md2: 991.98;
-// $md3: 767.98;
-// $md4: 575.98;
-// $md5: 479.98;
-
-// ===========================подключение шрифтов
-
-// @mixin fonts($font_name, $file_name, $weight, $style) {
-// 	@font-face {
-// 		font-family: $font_name;
-// 		font-display: swap;
-// 		src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
-// 		font-weight: #{$weight};
-// 		font-style: #{$style};
-// 	}
-// }
-
-@import "fonts";
+@import "_fonts";
 
 /*================================сетка=================*/
-// .container {
-// 	max-width: $mw + px;
-// 	margin: 0 auto;
-// 	width: 100%;
-// 	@media (max-width: $md1+px) {
-// 		max-width: 970px;
-// 	}
-// 	@media (max-width: $md2+px) {
-// 		max-width: 750px;
-// 	}
-// 	@media (max-width: $md3+px) {
-// 		max-width: 550px;
-// 	}
-// 	@media (max-width: $md4+px) {
-// 		max-width: 450px;
-// 	}
-// 	@media (max-width: $md5+px) {
-// 		max-width: none;
-// 		padding: 0 10px;
-// 	}
-// }
+
 .container {
 	max-width: $mw + px;
 	width: 100%;
@@ -77,9 +31,6 @@
 		max-width: none;
 		padding: 0 16px;
 	}
-	// @media (max-width: $md5+px) {
-	// 	max-width: none;
-	// }
 }
 
 /* ==============================общие стили============*/
@@ -107,6 +58,9 @@ main {
 	flex: 1 1 auto;
 	// overflow: hidden;
 }
+.container {
+	position: relative;
+}
 a {
 	font-family: $mainFont;
 	font-size: 14px;
@@ -122,7 +76,37 @@ a {
 		}
 	}
 }
+h1 {
+	font-family: $headerFont;
+	font-weight: 400;
+	font-size: 85px;
+	line-height: 105px;
+	color: #ffffff;
+	@media (max-width: $md1+px) {
+		font-size: 72px;
+		line-height: 95px;
+	}
+	@media (max-width: 1199px) {
+		font-size: 72px;
+		line-height: 95px;
+	}
+	@media (max-width: $md2+px) {
+		max-width: 566px;
+	}
+	@media (max-width: $md3+px) {
+		font-size: 64px;
+		line-height: 87px;
+		text-align: center;
+		max-width: none;
+	}
+	@media (max-width: $md4+px) {
+		font-size: 36px;
+		line-height: 49px;
+	}
+}
 h2 {
+	position: relative;
+	padding-bottom: 20px;
 	font-family: $headerFont;
 	font-weight: 400;
 	font-size: 60px;
@@ -133,16 +117,49 @@ h2 {
 		line-height: 68px;
 	}
 	@media (max-width: $md2+px) {
+		display: inline-block;
 		font-size: 42px;
 		line-height: 57px;
 	}
 	@media (max-width: $md3+px) {
+		display: block;
+		text-align: center;
 		font-size: 36px;
 		line-height: 49px;
+		padding-bottom: 12px;
 	}
 	@media (max-width: $md4+px) {
 		font-size: 24px;
 		line-height: 33px;
+	}
+	&::after {
+		content: "";
+		width: 375px;
+		height: 1px;
+		position: absolute;
+		top: 100%;
+		left: -120px;
+		background: $color-golden;
+		@media (max-width: $md1+px) {
+			width: 250px;
+			left: -30px;
+		}
+		@media (max-width: 1199px) {
+			left: -16px;
+		}
+		@media (max-width: $md2+px) {
+			left: -24px;
+			width: 106%;
+			// width: 590px;
+		}
+		@media (max-width: $md3+px) {
+			width: 300px;
+			left: 50%;
+			transform: translate(-50%, 0%);
+		}
+		@media (max-width: $md4+px) {
+			width: 200px;
+		}
 	}
 }
 h3 {
@@ -267,27 +284,93 @@ h4 {
 		}
 	}
 }
-// .wrapper {
-// 	width: 100%;
-// 	min-height: 100%;
-// 	overflow: hidden;
-// }
-// .ibg {
-// 	background-position: center;
-// 	background-size: cover;
-// 	background-repeat: no-repeat;
-// 	position: relative;
-// }
-
-// .ibg img {
-// 	width: 0;
-// 	height: 0;
-// 	position: absolute;
-// 	top: 0;
-// 	left: 0;
-// 	opacity: 0;
-// 	visibility: hidden;
-// }
+.cat-header {
+	min-height: 100vh;
+	.header-bottom {
+		display: block;
+	}
+	.header-bottom__content {
+		padding-left: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	h1.header-bottom__title {
+		max-width: 100%;
+		text-align: center;
+		margin-bottom: 50px;
+	}
+	p {
+		max-width: 65%;
+		font-size: 18px;
+		color: #fff;
+		margin-bottom: 50px;
+	}
+	h3 {
+		color: #fff;
+		// margin-bottom: 50px;
+	}
+	.header-bottom__link {
+		margin: 35px auto 0px auto;
+		width: auto;
+		padding: 0px 30px;
+	}
+}
+.thanks {
+	min-height: 100vh;
+	.header-bottom {
+		display: block;
+	}
+	.header-bottom__content {
+		padding-left: 0;
+	}
+	h1.header-bottom__title {
+		max-width: 100%;
+		text-align: center;
+	}
+	h3 {
+		margin-top: 40px;
+		text-align: center;
+		color: $color-white;
+		font-family: $mainFont;
+	}
+	.header-bottom__link {
+		margin: 65px auto 0px auto;
+	}
+	.thanks-bottom__contacts {
+		display: none;
+		@media (max-width: $md4+px) {
+			display: flex;
+			justify-content: center;
+		}
+	}
+	.thanks-bottom__socials {
+		display: flex;
+		justify-content: center;
+		margin-top: 50px;
+		li {
+			@media (max-width: $md4+px) {
+				margin: 0 12.5px;
+			}
+			a {
+				margin-right: 16px;
+				line-height: 30px;
+				@media (max-width: $md4+px) {
+					display: inline-block;
+					width: 40px;
+					height: 40px;
+					background-color: $color-golden;
+					font-size: 12px;
+					color: $color-white;
+					text-align: center;
+					line-height: 40px;
+					margin: 0;
+				}
+			}
+		}
+	}
+}
 
 /* =================================стили секций=============================*/
 /* =========================Главный экран=============================*/
