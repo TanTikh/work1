@@ -1,6 +1,6 @@
 
-// const projectFolder = "C:/Users/-user-/Downloads/OpenServer/domains/new-majoroff",
-const projectFolder = require("path").basename(__dirname),
+const projectFolder = "C:/Users/-user-/Downloads/OpenServer/domains/new-majoroff",
+	// const projectFolder = require("path").basename(__dirname),
 	sourceFolder = "#src";
 
 const path = {

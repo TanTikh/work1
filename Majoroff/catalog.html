@@ -16,75 +16,236 @@
 
 <body>
 	<header class="header cat-header" style="background-image: url(img/bg-01.jpg);">
-		<div class="container">
-			<div class="header__row">
-				<div class="header-top">
-					<div class="header-logo">
-						<a href="/">
-							<div class="header-logo__img">
-								<img src="img/logo.svg" alt="logo">
+		<div class="header__wrapper">
+			<div class="container">
+				<div class="header__row">
+					<div class="header-top">
+						<div class="header-logo">
+							<a href="/">
+								<div class="header-logo__img">
+									<img src="img/logo.svg" alt="logo">
+								</div>
+								<div class="header-logo__brand">Majoroff</div>
+							</a>
+						</div>
+						<div class="header-contacts">
+							<ul class="header-contacts__socials">
+								<li><a href="#" class="header__link">Vk</a></li>
+								<li><a href="#" class="header__link">In</a></li>
+								<li><a href="#" class="header__link">Fb</a></li>
+							</ul>
+							<div class="header-contacts__line"></div>
+							<div class="header-contacts__calls">
+								<div class="header__phone">
+									<a href="tel:+79096377666" class="header__phone-link header__link">+7 (909) 637-76-66</a>
+								</div>
+								<div class="header__callback">
+									<a href="#" class="header__popup header__link cat-popup-link">Перезвоните мне</a>
+								</div>
 							</div>
-							<div class="header-logo__brand">Majoroff</div>
-						</a>
+
+						</div>
+						<div class="header__menu-icon">
+							<div></div>
+							<div></div>
+							<div></div>
+						</div>
 					</div>
-					<div class="header-contacts">
-						<ul class="header-contacts__socials">
-							<li><a href="#" class="header__link">Vk</a></li>
-							<li><a href="#" class="header__link">In</a></li>
-							<li><a href="#" class="header__link">Fb</a></li>
-						</ul>
-						<div class="header-contacts__line"></div>
-						<div class="header-contacts__calls">
-							<div class="header__phone">
-								<a href="tel:+79096377666" class="header__phone-link header__link">+7 (909) 637-76-66</a>
-							</div>
-							<div class="header__callback">
-								<a href="#" class="header__popup header__link popup-link">Перезвоните мне</a>
-							</div>
+					<div class="header-bottom">
+						<div class="header-bottom__content">
+							<h1 class="header-bottom__title">Каталог</h1>
+							<p>
+								Каждый из представленных вариантов дизайна чехлов доступен к заказу на все модели iPhone,
+								Samsung и
+								другие моделей телефонов. Для этого выберите дизайн чехла и в комментарии в форме заказа укажите
+								нужную модель телефона.
+							</p>
+							<h4>Не нашли то, что вам нужно?</h4>
+							<a href="#" class="header-bottom__link cat-popup-link">Закажите чехол с индивидуальным дизайном</a>
 						</div>
 
 					</div>
-					<div class="header__menu-icon">
-						<div></div>
-						<div></div>
-						<div></div>
-					</div>
 				</div>
-				<div class="header-bottom">
-					<div class="header-bottom__content">
-						<h1 class="header-bottom__title">Каталог</h1>
-						<p>
-							Каждый из представленных вариантов дизайна чехлов доступен к заказу на все модели iPhone, Samsung и
-							другие моделей телефонов. Для этого выберите дизайн чехла и в комментарии в форме заказа укажите
-							нужную модель телефона.
-						</p>
-						<h4>Не нашли то, что вам нужно?</h4>
-						<a href="#" class="header-bottom__link cat-popup-link">Закажите чехол с индивидуальным дизайном</a>
-					</div>
 
-				</div>
 			</div>
-
 		</div>
 	</header>
 	<section class="cat">
 		<div class="container">
+			<div class="cat__filter-title">
+				<div class="cat__filter-btn">
+					<div class="cat__filter-text">Выбрать категорию</div>
+					<div class="cat__filter-icon">
+						<div></div>
+						<div></div>
+						<div></div>
+					</div>
+				</div>
+
+			</div>
+
 			<div class="cat__wrapper">
+
 				<aside class="cat-filter">
 
+					<div class="cat-filter__close">
+						<div class="cat-filter__close-btn">
+							<div></div>
+							<div></div>
+							<div></div>
+						</div>
+
+					</div>
+					<div class="widget_categories">
+						<ul>
+							<li><a href="#">Кожаные</a></li>
+							<li><a href="#">Пластиковые</a></li>
+							<li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+						</ul>
+					</div>
+					<div class="widget_tag_cloud">
+						<ul>
+							<li><a href="#">С гербами</a></li>
+							<li><a href="#">Lorem ipsum dolor sit.</a></li>
+							<li><a href="#">С принтами</a></li>
+						</ul>
+					</div>
 				</aside>
 				<main class="cat-main">
-					<div class="goods-card">
-						<a href="" class="goods-card__img"><img src="img/Чехлы_из_натуральной_кожи-2.jpg" alt=""></a>
-						<div class="goods-card__body">
-							<div class="goods-card__categories">Категория</div>
-							<div class="goods-card__name">Название модели</div>
-							<div class="goods-card__desc">Краткое описание модели</div>
-							<div class="goods-card__prices">20000 <span>руб.</span> </div>
-							<div class="goods-card__btn"><a href="#" class="cat-popup-link-w"></a></div>
+					<div class="goods">
+						<div class="goods-card">
+							<a href="" class="goods-card__img">
+								<img src="img/Чехлы_из_натуральной_кожи-2.jpg" alt="">
+							</a>
+							<div class="goods-card__body">
+								<!-- <div class="goods-card__categories">Категория</div> -->
+								<h4 class="goods-card__name">Название модели</h4>
+								<div class="goods-card__desc">Краткое описание модели Краткое описание модели</div>
+								<div class="goods-card__prices">20000 <span>руб.</span> </div>
+							</div>
+							<div class="goods-card__btn cat-popup-link-w"><a href="#">Я хочу такой же!</a></div>
+
+						</div>
+						<div class="goods-card">
+							<a href="" class="goods-card__img">
+								<img src="img/Чехлы_из_натуральной_кожи-2.jpg" alt="">
+							</a>
+							<div class="goods-card__body">
+								<!-- <div class="goods-card__categories">Категория</div> -->
+								<h4 class="goods-card__name">Название модели</h4>
+								<div class="goods-card__desc">Краткое описание модели Краткое описание модели</div>
+								<div class="goods-card__prices">20000 <span>руб.</span> </div>
+							</div>
+							<div class="goods-card__btn cat-popup-link-w"><a href="#">Я хочу такой же!</a></div>
+
+						</div>
+						<div class="goods-card">
+							<a href="" class="goods-card__img">
+								<img src="img/Чехлы_из_натуральной_кожи-2.jpg" alt="">
+							</a>
+							<div class="goods-card__body">
+								<!-- <div class="goods-card__categories">Категория</div> -->
+								<h4 class="goods-card__name">Название модели</h4>
+								<div class="goods-card__desc">Краткое описание модели Краткое описание модели</div>
+								<div class="goods-card__prices">20000 <span>руб.</span> </div>
+							</div>
+							<div class="goods-card__btn cat-popup-link-w"><a href="#">Я хочу такой же!</a></div>
+
+						</div>
+						<div class="goods-card">
+							<a href="" class="goods-card__img">
+								<img src="img/Чехлы_из_натуральной_кожи-2.jpg" alt="">
+							</a>
+							<div class="goods-card__body">
+								<!-- <div class="goods-card__categories">Категория</div> -->
+								<h4 class="goods-card__name">Название модели</h4>
+								<div class="goods-card__desc">Краткое описание модели Краткое описание модели</div>
+								<div class="goods-card__prices">20000 <span>руб.</span> </div>
+							</div>
+							<div class="goods-card__btn cat-popup-link-w"><a href="#">Я хочу такой же!</a></div>
+
+						</div>
+						<div class="goods-card">
+							<a href="" class="goods-card__img">
+								<img src="img/Чехлы_из_натуральной_кожи-2.jpg" alt="">
+							</a>
+							<div class="goods-card__body">
+								<!-- <div class="goods-card__categories">Категория</div> -->
+								<h4 class="goods-card__name">Название модели</h4>
+								<div class="goods-card__desc">Краткое описание модели Краткое описание модели</div>
+								<div class="goods-card__prices">20000 <span>руб.</span> </div>
+							</div>
+							<div class="goods-card__btn cat-popup-link-w"><a href="#">Я хочу такой же!</a></div>
+
+						</div>
+						<div class="goods-card">
+							<a href="" class="goods-card__img">
+								<img src="img/Чехлы_из_натуральной_кожи-2.jpg" alt="">
+							</a>
+							<div class="goods-card__body">
+								<!-- <div class="goods-card__categories">Категория</div> -->
+								<h4 class="goods-card__name">Название модели</h4>
+								<div class="goods-card__desc">Краткое описание модели Краткое описание модели</div>
+								<div class="goods-card__prices">20000 <span>руб.</span> </div>
+							</div>
+							<div class="goods-card__btn cat-popup-link-w"><a href="#">Я хочу такой же!</a></div>
+
+						</div>
+						<div class="goods-card">
+							<a href="" class="goods-card__img">
+								<img src="img/Чехлы_из_натуральной_кожи-2.jpg" alt="">
+							</a>
+							<div class="goods-card__body">
+								<!-- <div class="goods-card__categories">Категория</div> -->
+								<h4 class="goods-card__name">Название модели</h4>
+								<div class="goods-card__desc">Краткое описание модели Краткое описание модели</div>
+								<div class="goods-card__prices">20000 <span>руб.</span> </div>
+							</div>
+							<div class="goods-card__btn cat-popup-link-w"><a href="#">Я хочу такой же!</a></div>
+
+						</div>
+						<div class="goods-card">
+							<a href="" class="goods-card__img">
+								<img src="img/Чехлы_из_натуральной_кожи-2.jpg" alt="">
+							</a>
+							<div class="goods-card__body">
+								<!-- <div class="goods-card__categories">Категория</div> -->
+								<h4 class="goods-card__name">Название модели чехла</h4>
+								<div class="goods-card__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+									qui
+									placeat explicabo ex quo sint reiciendis omnis eos deleniti ipsum perspiciatis aut inventore
+									facilis consequuntur fugit cupiditate, numquam nesciunt enim autem nemo ipsa temporibus
+									pariatur
+									culpa alias! Excepturi repellat necessitatibus animi ullam, dolor, sit et officiis, minus
+									quaerat rem hic.</div>
+								<div class="goods-card__prices">20000 <span>руб.</span> </div>
+							</div>
+							<div class="goods-card__btn cat-popup-link-w"><a href="#">Я хочу такой же!</a></div>
+
+						</div>
+						<div class="goods-card">
+							<a href="" class="goods-card__img">
+								<img src="img/Чехлы_из_натуральной_кожи-2.jpg" alt="">
+							</a>
+							<div class="goods-card__body">
+								<!-- <div class="goods-card__categories">Категория</div> -->
+								<h4 class="goods-card__name">Название модели</h4>
+								<div class="goods-card__desc">Краткое описание модели Краткое описание модели</div>
+								<div class="goods-card__prices">20000 <span>руб.</span> </div>
+
+							</div>
+							<div class="goods-card__btn cat-popup-link-w"><a href="#">Я хочу такой же!</a></div>
 						</div>
 					</div>
+					<div class="pagination">
+						<ul class="pagination-list">
+							<li><a href="#" class="active">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+						</ul>
+					</div>
 				</main>
+
 			</div>
 
 		</div>

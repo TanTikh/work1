@@ -232,6 +232,27 @@
 		color: rgba(0, 0, 0, 0);
 	}
 }
-.popup.active {
-	display: block;
+// .popup.active {
+// 	display: block;
+// }
+.cat-popup-img {
+	&__overlay {
+		width: 100%;
+		height: 100vh;
+		position: relative;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		overflow: auto;
+		background-color: rgba(28, 27, 27, 0.99);
+	}
+
+	&__content {
+		max-width: 600px;
+		height: auto;
+	}
 }

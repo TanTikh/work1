@@ -183,6 +183,15 @@ $(document).ready(function () {
 	showPopup('.cat-popup-link', '.cat-popup-file', '.cat-popup-file .popup__close');
 	showPopup('.cat-popup-link-w', '.cat-popup-want', '.cat-popup-want .popup__close');
 
+	if ($('.cat__filter-title').length) {
+		$('.cat__filter-btn').on('click', function () {
+			$('.cat-filter').addClass('active');
+		});
+		$('.cat-filter__close-btn').on('click', function () {
+			$('.cat-filter').removeClass('active');
+		});
+
+	}
 
 	// inputmask
 	$('input[type=tel]').inputmask("+7(999)999-99-99");
